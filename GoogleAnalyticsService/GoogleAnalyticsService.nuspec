@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/jmoceri34/google-analytics-service</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Latest</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Google Analytics</tags>
+  </metadata>
+  <files>
+    <file src="bin\**" target="lib/{framework name}[{version}]" />
+  </files>
+</package>

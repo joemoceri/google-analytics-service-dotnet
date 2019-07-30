@@ -1,26 +1,4 @@
-# google-analytics-service
-
-> Service wrapper for Google Analytics Reporting v4 that accepts Metrics and Dimensions and returns a DataTable with the result
-
-* [Overview](#overview)
-* [Install](#install)
-* [Usage](#usage)
-
-<a name="overview"></a>
-## Overview
-Service wrapper for Google Analytics Reporting v4 that accepts Metrics and Dimensions and returns a DataTable with the result
-
-<a name="install"></a>
-## Install
-Using NuGet
-```sh
-Install-Package GoogleAnalyticsService
-```
-
-<a name="usage"></a>
-## Usage
-```csharp
-using Google.Apis.AnalyticsReporting.v4.Data;
+﻿using Google.Apis.AnalyticsReporting.v4.Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -78,5 +56,3 @@ namespace GoogleAnalyticsExample
         }
     }
 }
-
-```
