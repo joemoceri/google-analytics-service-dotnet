@@ -1,6 +1,6 @@
 # google-analytics-service
 
-> Service wrapper for Google Analytics Reporting v4 that accepts Metrics and Dimensions and returns a DataTable with the result
+> This is a C# .NET service wrapper for Google Analytics Reporting v4 that accepts Metrics and Dimensions and returns a DataTable with the result.
 
 * [Overview](#overview)
 * [Install](#install)
@@ -8,13 +8,13 @@
 
 <a name="overview"></a>
 ## Overview
-Service wrapper for Google Analytics Reporting v4 that accepts Metrics and Dimensions and returns a DataTable with the result
+This is a C# .NET service wrapper for Google Analytics Reporting v4 that accepts Metrics and Dimensions and returns a DataTable with the result. Please see usage for how to use.
 
 <a name="install"></a>
 ## Install
 Using NuGet
 ```sh
-Install-Package GoogleAnalyticsService
+Install-Package Io.JoeMoceri.GoogleAnalyticsService
 ```
 
 <a name="usage"></a>
