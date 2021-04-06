@@ -13,7 +13,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace GoogleAnalyticsExample
+namespace Io.JoeMoceri.GoogleAnalyticsService
 {
     public interface IGoogleAnalyticsService
     {
@@ -32,8 +32,8 @@ namespace GoogleAnalyticsExample
 
         public async Task<DataTable> GetReport
         (
-            string loginEmail, string clientSecretPath, string viewId, 
-            DateTime startDate, DateTime endDate, 
+            string loginEmail, string clientSecretPath, string viewId,
+            DateTime startDate, DateTime endDate,
             IList<Metric> metrics, IList<Dimension> dimensions
         )
         {
@@ -84,7 +84,7 @@ namespace GoogleAnalyticsExample
             result.Columns.AddRange(columns.ToArray());
 
             var rows = report.Data.Rows;
-            foreach(var row in rows)
+            foreach (var row in rows)
             {
                 var r = result.NewRow();
                 var dimensions = row.Dimensions;
@@ -92,7 +92,7 @@ namespace GoogleAnalyticsExample
                 var data = new List<string>();
                 data.AddRange(dimensions);
                 data.AddRange(metrics);
-                for(var i = 0; i < data.Count; i++)
+                for (var i = 0; i < data.Count; i++)
                 {
                     r[i] = data[i];
                 }

@@ -3,16 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace GoogleAnalyticsExample
+namespace Io.JoeMoceri.GoogleAnalyticsService
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             var applicationName = "Your application name";
             var fileDataStoreFolder = "Your folder";
             var service = new GoogleAnalyticsService(applicationName, fileDataStoreFolder);
-            
+
             var loginEmail = "example@example.com";
             var startDate = DateTime.Now.AddYears(-1);
             var endDate = DateTime.Now;
@@ -34,7 +34,7 @@ namespace GoogleAnalyticsExample
             try
             {
                 var result = service.GetReport(loginEmail, clientSecretPath, viewId, startDate, endDate, metrics, dimensions).Result;
-                foreach(DataColumn column in result.Columns)
+                foreach (DataColumn column in result.Columns)
                 {
                     Console.Write($"{column.ColumnName} ");
                 }
@@ -47,7 +47,7 @@ namespace GoogleAnalyticsExample
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
