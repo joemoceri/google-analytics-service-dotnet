@@ -5,9 +5,16 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleAnalyticsServiceForDotNet", "src\GoogleAnalyticsServiceForDotNet\GoogleAnalyticsServiceForDotNet.csproj", "{7EBDE165-82CA-40A9-A179-4770F125A04D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleAnalyticsServiceForDotNet.Sample", "src\GoogleAnalyticsServiceForDotNet.Sample\GoogleAnalyticsServiceForDotNet.Sample.csproj", "{E2E638B5-61D3-4FE3-98FC-E5774C4D194D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleAnalyticsServiceForDotNet.Sample", "src\GoogleAnalyticsServiceForDotNet.Sample\GoogleAnalyticsServiceForDotNet.Sample.csproj", "{E2E638B5-61D3-4FE3-98FC-E5774C4D194D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleAnalyticsServiceForDotNet.Tests", "src\GoogleAnalyticsServiceForDotNet.Tests\GoogleAnalyticsServiceForDotNet.Tests.csproj", "{C1E5972B-CD30-4F09-A360-84DE34BE96E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleAnalyticsServiceForDotNet.Tests", "src\GoogleAnalyticsServiceForDotNet.Tests\GoogleAnalyticsServiceForDotNet.Tests.csproj", "{C1E5972B-CD30-4F09-A360-84DE34BE96E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-items", "solution-items", "{CD78FF1D-032B-48B7-A528-E286C352C700}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

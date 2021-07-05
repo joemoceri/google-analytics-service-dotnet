@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
@@ -6,11 +6,12 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Joe Moceri</Authors>
     <Description>This is a C# .NET service wrapper for Google Analytics Reporting v4 that accepts Metrics and Dimensions and returns a DataTable with the result.</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseExpression></PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/joemoceri/google-analytics-service-dotnet</PackageProjectUrl>
     <RepositoryUrl>https://github.com/joemoceri/google-analytics-service-dotnet</RepositoryUrl>
     <PackageTags>google, google analytics, services, datatable, reporting, analytics</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="icon.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
