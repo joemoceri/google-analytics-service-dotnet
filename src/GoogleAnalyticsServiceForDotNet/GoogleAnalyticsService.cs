@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace GoogleAnalyticsServiceForDotNet
 {
     /// <summary>
-    /// 
+    /// This is the main class for Google Analytics Service For Dot Net
     /// </summary>
     public class GoogleAnalyticsService
     {
