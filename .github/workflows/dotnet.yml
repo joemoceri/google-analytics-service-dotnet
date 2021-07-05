@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore GoogleAnalyticsServiceForDotNet\GoogleAnalyticsServiceForDotNet.csproj
+      run: dotnet restore GoogleAnalyticsServiceForDotNet/GoogleAnalyticsServiceForDotNet.csproj
       working-directory: src
     - name: Build
       run: dotnet build GoogleAnalyticsServiceForDotNet --no-restore
