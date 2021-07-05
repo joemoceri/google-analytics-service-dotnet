@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Io.JoeMoceri.GoogleAnalyticsService\GoogleAnalyticsServiceForDotNet.csproj" />
+    <ProjectReference Include="..\GoogleAnalyticsServiceForDotNet\GoogleAnalyticsServiceForDotNet.csproj" />
   </ItemGroup>
 
 </Project>
