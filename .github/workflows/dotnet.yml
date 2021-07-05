@@ -18,10 +18,10 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore GoogleAnalyticsServiceForDotNet.sln
+      run: dotnet restore GoogleAnalyticsServiceForDotNet\GoogleAnalyticsServiceForDotNet.csproj
       working-directory: src
     - name: Build
-      run: dotnet build GoogleAnalyticsServiceForDotNet.sln --no-restore
+      run: dotnet build GoogleAnalyticsServiceForDotNet --no-restore
       working-directory: src      
     - name: Test
       run: dotnet test GoogleAnalyticsServiceForDotNet.Tests --verbosity normal
