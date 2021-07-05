@@ -1,4 +1,4 @@
-# google-analytics-service
+# google-analytics-service-for-dotnet
 
 * [Overview](#overview)
 * [Install](#install)
