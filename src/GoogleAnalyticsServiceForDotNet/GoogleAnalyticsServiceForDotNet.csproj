@@ -14,6 +14,10 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>$(MSBuildThisFileDirectory)\bin\$(Configuration)\$(TargetFramework)\GoogleAnalyticsServiceForDotNet.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="docfx.console" Version="2.58.0">
       <PrivateAssets>all</PrivateAssets>

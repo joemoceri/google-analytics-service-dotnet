@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GoogleAnalyticsServiceForDotNet</name>
+    </assembly>
+    <members>
+        <member name="T:GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService">
+            <summary>
+            This is the main class for Google Analytics Service For Dot Net
+            </summary>
+        </member>
+        <member name="F:GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.applicationName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.fileDataStoreFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="applicationName"></param>
+            <param name="fileDataStoreFolder"></param>
+        </member>
+        <member name="M:GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String,System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Metric},System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Dimension})">
+            <summary>
+            
+            </summary>
+            <param name="loginEmail"></param>
+            <param name="clientSecretPath"></param>
+            <param name="viewId"></param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <param name="metrics"></param>
+            <param name="dimensions"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
