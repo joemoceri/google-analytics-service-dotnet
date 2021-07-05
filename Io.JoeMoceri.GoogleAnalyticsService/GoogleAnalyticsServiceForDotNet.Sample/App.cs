@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace Io.JoeMoceri.GoogleAnalyticsService
+namespace GoogleAnalyticsServiceForDotNet.Sample
 {
-    class Program
+    public class App
     {
-        static void Main(string[] args)
+        public void Run()
         {
             var applicationName = "Your application name";
             var fileDataStoreFolder = "Your folder";
