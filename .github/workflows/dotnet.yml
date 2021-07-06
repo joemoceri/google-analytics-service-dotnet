@@ -21,7 +21,7 @@ jobs:
       run: dotnet restore GoogleAnalyticsServiceForDotNet/GoogleAnalyticsServiceForDotNet.csproj
       working-directory: src
     - name: Build
-      run: dotnet build GoogleAnalyticsServiceForDotNet --no-restore
+      run: dotnet build GoogleAnalyticsServiceForDotNet/GoogleAnalyticsServiceForDotNet.csproj --no-restore
       working-directory: src      
     - name: Test
       run: dotnet test GoogleAnalyticsServiceForDotNet.Tests --verbosity normal
