@@ -73,13 +73,17 @@
   
   <h1 id="GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService" data-uid="GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService" class="text-break">Class GoogleAnalyticsService
   </h1>
-  <div class="markdown level0 summary"><p>This is the main class for Google Analytics Service For Dot Net</p>
+  <div class="markdown level0 summary"><p>This is the main class for Google Analytics Service For Dot Net. Use <a class="xref" href="GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.html#GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService_GetReport_System_String_System_String_System_DateTime_System_DateTime_System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Metric__System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Dimension__">GetReport(String, String, DateTime, DateTime, IList&lt;Metric&gt;, IList&lt;Dimension&gt;)</a> to get a report with the provided input.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GoogleAnalyticsService</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.html">IGoogleAnalyticsService</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -109,24 +113,25 @@
   <h6><strong>Assembly</strong>: GoogleAnalyticsServiceForDotNet.dll</h6>
   <h5 id="GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GoogleAnalyticsService</code></pre>
+    <pre><code class="lang-csharp hljs">public class GoogleAnalyticsService : IGoogleAnalyticsService</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/new/main/apiSpec/new?filename=GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService__ctor_System_String_System_String_.md&amp;value=---%0Auid%3A%20GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.%23ctor(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/new/main/apiSpec/new?filename=GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService__ctor_System_String_.md&amp;value=---%0Auid%3A%20GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/blob/main/src/GoogleAnalyticsServiceForDotNet/GoogleAnalyticsService.cs/#L36">View Source</a>
+    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/blob/main/src/GoogleAnalyticsServiceForDotNet/GoogleAnalyticsService.cs/#L44">View Source</a>
   </span>
   <a id="GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService__ctor_" data-uid="GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.#ctor*"></a>
-  <h4 id="GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService__ctor_System_String_System_String_" data-uid="GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.#ctor(System.String,System.String)">GoogleAnalyticsService(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService__ctor_System_String_" data-uid="GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.#ctor(System.String)">GoogleAnalyticsService(String)</h4>
+  <div class="markdown level1 summary"><p>This constructor accepts an applicationName, which by default is null.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GoogleAnalyticsService(string applicationName, string fileDataStoreFolder)</code></pre>
+    <pre><code class="lang-csharp hljs">public GoogleAnalyticsService(string applicationName = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,12 +146,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">applicationName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">fileDataStoreFolder</span></td>
-        <td></td>
+        <td><p>The Client Service Application Name used in the Google Analytics Initializer call.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -154,18 +155,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/new/main/apiSpec/new?filename=GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService_GetReport_System_String_System_String_System_String_System_DateTime_System_DateTime_System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Metric__System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Dimension__.md&amp;value=---%0Auid%3A%20GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String%2CSystem.String%2CSystem.String%2CSystem.DateTime%2CSystem.DateTime%2CSystem.Collections.Generic.IList%7BGoogle.Apis.AnalyticsReporting.v4.Data.Metric%7D%2CSystem.Collections.Generic.IList%7BGoogle.Apis.AnalyticsReporting.v4.Data.Dimension%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/new/main/apiSpec/new?filename=GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService_GetReport_System_String_System_String_System_DateTime_System_DateTime_System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Metric__System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Dimension__.md&amp;value=---%0Auid%3A%20GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String%2CSystem.String%2CSystem.DateTime%2CSystem.DateTime%2CSystem.Collections.Generic.IList%7BGoogle.Apis.AnalyticsReporting.v4.Data.Metric%7D%2CSystem.Collections.Generic.IList%7BGoogle.Apis.AnalyticsReporting.v4.Data.Dimension%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/blob/main/src/GoogleAnalyticsServiceForDotNet/GoogleAnalyticsService.cs/#L53">View Source</a>
+    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/blob/main/src/GoogleAnalyticsServiceForDotNet/GoogleAnalyticsService.cs/#L59">View Source</a>
   </span>
   <a id="GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService_GetReport_" data-uid="GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport*"></a>
-  <h4 id="GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService_GetReport_System_String_System_String_System_String_System_DateTime_System_DateTime_System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Metric__System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Dimension__" data-uid="GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String,System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Metric},System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Dimension})">GetReport(String, String, String, DateTime, DateTime, IList&lt;Metric&gt;, IList&lt;Dimension&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService_GetReport_System_String_System_String_System_DateTime_System_DateTime_System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Metric__System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Dimension__" data-uid="GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Metric},System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Dimension})">GetReport(String, String, DateTime, DateTime, IList&lt;Metric&gt;, IList&lt;Dimension&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get a Google Analytics v4 Reporting Report with the provided input</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async Task&lt;DataTable&gt; GetReport(string loginEmail, string clientSecretPath, string viewId, DateTime startDate, DateTime endDate, IList&lt;Metric&gt; metrics, IList&lt;Dimension&gt; dimensions)</code></pre>
+    <pre><code class="lang-csharp hljs">public DataTable GetReport(string credentialFilePath, string viewId, DateTime startDate, DateTime endDate, IList&lt;Metric&gt; metrics, IList&lt;Dimension&gt; dimensions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,38 +181,39 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">loginEmail</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">clientSecretPath</span></td>
-        <td></td>
+        <td><span class="parametername">credentialFilePath</span></td>
+        <td><p>This is the path to your service account .json file</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">viewId</span></td>
-        <td></td>
+        <td><p>This is the view id from analytics.google.com</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.DateTime</span></td>
         <td><span class="parametername">startDate</span></td>
-        <td></td>
+        <td><p>The start date for the report</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.DateTime</span></td>
         <td><span class="parametername">endDate</span></td>
-        <td></td>
+        <td><p>The end date for the report</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Google.Apis.AnalyticsReporting.v4.Data.Metric</span>&gt;</td>
         <td><span class="parametername">metrics</span></td>
-        <td></td>
+        <td><p>The metrics to use when generating the report</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Google.Apis.AnalyticsReporting.v4.Data.Dimension</span>&gt;</td>
         <td><span class="parametername">dimensions</span></td>
-        <td></td>
+        <td><p>The dimensions to use when generating the report</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -224,11 +227,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Data.DataTable</span>&gt;</td>
-        <td></td>
+        <td><span class="xref">System.Data.DataTable</span></td>
+        <td><p><span class="xref">System.Data.DataTable</span> with the unique dimensions combinations for the rows</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.html">IGoogleAnalyticsService</a>
+  </div>
 </article>
           </div>
           
@@ -240,7 +248,7 @@
                     <a href="https://github.com/joemoceri/google-analytics-service-dotnet/new/main/apiSpec/new?filename=GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService.md&amp;value=---%0Auid%3A%20GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/blob/main/src/GoogleAnalyticsServiceForDotNet/GoogleAnalyticsService.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/blob/main/src/GoogleAnalyticsServiceForDotNet/GoogleAnalyticsService.cs/#L33" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

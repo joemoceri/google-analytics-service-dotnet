@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Google Analytics Service for .NET API Reference </title>
+    <title>Examples </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Google Analytics Service for .NET API Reference ">
+    <meta name="title" content="Examples ">
     <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.ico">
@@ -67,9 +67,77 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="google-analytics-service-for-net-api-reference">Google Analytics Service for <strong>.NET</strong> API Reference</h1>
+<h3 id="examples">Examples</h3>
 
-<h2 id="please-use-the-side-bar-to-view-references">Please use the side bar to view references.</h2>
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#google-analytics-service">Google Analytics Service</a></li>
+</ul>
+<h4 id="description">Description</h4>
+<p>To see it in action, check out the <a href="https://github.com/joemoceri/google-analytics-service-dotnet/tree/main/src/GoogleAnalyticsServiceForDotNet.Tests">Tests Project</a> and <a href="https://github.com/joemoceri/google-analytics-service-dotnet/tree/main/src/GoogleAnalyticsServiceForDotNet.Sample">Sample Project</a>.</p>
+<h4 id="google-analytics-service">Google Analytics Service</h4>
+<p>You can find the example below in the Sample project.</p>
+<pre><code class="lang-csharp">public void Run()
+{
+    // Give it a name, could also be null
+    var applicationName = &quot;Google Analytics App&quot;;
+    // this is the main service class to use
+    var service = new GoogleAnalyticsService(applicationName);
+
+    // set your start and end dates here
+    var startDate = DateTime.Now.AddYears(-1);
+    var endDate = DateTime.Now;
+
+    // add your dimensions and metrics here. The data table will have rows for every unique dimension combination. The columns will be the dimensions, then metrics, and the rows the same.
+    var dimensions = new List&lt;Dimension&gt;();
+    var dimension = new Dimension();
+    dimension.Name = &quot;ga:date&quot;;
+    dimensions.Add(dimension);
+    var metrics = new List&lt;Metric&gt;();
+    var metric = new Metric();
+    metric.Expression = &quot;ga:sessions&quot;;
+    metric.Alias = &quot;Sessions&quot;;
+    metrics.Add(metric);
+
+    // the view id found inside google analytics (analytics.google.com)
+    var viewId = &quot;yourViewId&quot;;
+
+    // path to your service account json file
+    var serviceAccountFilePath = &quot;******.json&quot;; 
+
+    try
+    {
+        // this will return the DataTable with the columns being unique dimension combinations
+        var result = service.GetReport(serviceAccountFilePath, viewId, startDate, endDate, metrics, dimensions);
+
+        // The following will output to the console. You can take this output and build structure off of it to suite your needs.
+        foreach (DataColumn column in result.Columns)
+        {
+            Console.Write($&quot;{column.ColumnName} &quot;);
+        }
+
+        Console.WriteLine();
+
+        foreach (DataRow row in result.Rows)
+        {
+            var r = string.Empty;
+            foreach (DataColumn column in result.Columns)
+            {
+                r += $&quot;{row[column]} &quot;;
+            }
+
+            Console.WriteLine(r);
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex);
+    }
+
+    Console.Read();
+}
+</code></pre>
 </article>
           </div>
           
@@ -78,7 +146,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/blob/main/src/GoogleAnalyticsServiceForDotNet/api/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/joemoceri/google-analytics-service-dotnet/blob/main/src/GoogleAnalyticsServiceForDotNet/articles/Examples.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

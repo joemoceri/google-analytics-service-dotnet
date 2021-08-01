@@ -9,7 +9,19 @@
       "output": {
         ".html": {
           "relative_path": "api/GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.html",
-          "hash": "4JgXmqgM857kUlbCZ14U5/jS9QC/6qO3n3/B+SEs4qY="
+          "hash": "MiWvDDEf13tU1rORtrorwjjZnYTssbVYQeciQqRhzc8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.html",
+          "hash": "WlFfEx5JJY0CFyTFFAcdhfbtDYqyfZI5vEarApX4F30="
         }
       },
       "is_incremental": false,
@@ -21,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GoogleAnalyticsServiceForDotNet.html",
-          "hash": "Uzza8gY8I6b1NcOrWpQuQpM8rayCeeX/9A0j3LTIrwQ="
+          "hash": "iKZ0zzS/5VMsvr3JHNwEs9S8EIKsa8APnZUJ7PtC/yk="
         }
       },
       "is_incremental": false,
@@ -33,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "w6f8eDkTEXdiNqn82J2hLAscQCUJNRVdORbd+SHMOT8="
+          "hash": "+wu3w+501XyXvm7QYOxju3eDfX6B3/FdLIS9VFamvX0="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -45,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "usQUsDVIo5evHnew6TLc6ya5oAlrYYKkuf3m4+kT/nk="
+          "hash": "Jt4gu+GeQ2CVkN0wkj4rFdhiEB+dTj+zAC6Ue08uM5w="
         }
       },
       "is_incremental": false,
@@ -53,11 +65,110 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "source_relative_path": "articles/Contributing.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "znRCTgIeQMO4fC/VOVyQ+biOtOUfvM+hN58fBou4aXA="
+          "relative_path": "articles/Contributing.html",
+          "hash": "K5ImK8aKB88DgMTMLrza3QDcNmzRQjLGLvrBRNC20Gg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Examples.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Examples.html",
+          "hash": "7oeckv6mpo4MGCFXXErCi/RlWGHlz133MO/UZ809fqY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/GoogleAnalyticsService.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/GoogleAnalyticsService.html",
+          "hash": "pxGMHCV/WCYjrzy3L3zFpfWfZbQKAh1a0XeJ0C/mbs0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Installation.html",
+          "hash": "jlPkoK39Ndgepq0IOnNlpo8/2MSoC9YhNuIfhc2IqRQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/License.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/License.html",
+          "hash": "E/kqEYVPM0MRc1rH3qah6XWZxMTt7KoUiYHmZVhOaAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/Overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Overview.html",
+          "hash": "wt8Xtlw5hCJZd2mgMhds7wde6vfG6Dn3vG2Nz+mcQeA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Requirements.html",
+          "hash": "SEheif5NA3Dsfcm+F307mBhO8spHlujSiH1zLdSdgWo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Roadmap.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Roadmap.html",
+          "hash": "FqsrO0+gZbvU3r2lhK7NZdLyYfDyjshXcEhtSNXdv4Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Versioning.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Versioning.html",
+          "hash": "OujxEAZaiq1Pyj2QoJLuMpmJ6LeR5VKpD9whk/K0AJ8="
         }
       },
       "is_incremental": false,
@@ -69,7 +180,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+          "hash": "0LT8Lu7nuuqgv78uux2gk7zMMBe/mViHbjRfGg6txPA="
         }
       },
       "is_incremental": false,
@@ -98,15 +209,18 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "LnM5O0TZlI3OFELKgvjwiRxvyri4OL3890Pd5JFvREM="
+          "hash": "MoVxXrL6qLYepwyiK0qAA8QZCGTfXVrKSwTU7bN6xcQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -115,7 +229,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+          "hash": "bODxxlRUEALdF+zw4kGpeVtuQwB6Pi7HuoS5FareqKk="
         }
       },
       "is_incremental": false,
@@ -125,25 +239,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 0
+          "total_file_count": 11,
+          "skipped_file_count": 11
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 0
+          "total_file_count": 3,
+          "skipped_file_count": 1
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

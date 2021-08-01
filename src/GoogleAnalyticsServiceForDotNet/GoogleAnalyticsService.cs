@@ -2,62 +2,66 @@
 using Google.Apis.AnalyticsReporting.v4.Data;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
-using Google.Apis.Util.Store;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace GoogleAnalyticsServiceForDotNet
 {
     /// <summary>
-    /// This is the main class for Google Analytics Service For Dot Net
+    /// This is the main interface for <see cref="GoogleAnalyticsService"/>
     /// </summary>
-    public class GoogleAnalyticsService
+    public interface IGoogleAnalyticsService
     {
         /// <summary>
-        /// 
+        /// Get a Google Analytics v4 Reporting Report with the provided input
+        /// </summary>
+        /// <param name="credentialFilePath">This is the path to your service account .json file</param>
+        /// <param name="viewId">This is the view id from analytics.google.com</param>
+        /// <param name="startDate">The start date for the report</param>
+        /// <param name="endDate">The end date for the report</param>
+        /// <param name="metrics">The metrics to use when generating the report</param>
+        /// <param name="dimensions">The dimensions to use when generating the report</param>
+        /// <returns><see cref="DataTable"/> with the unique dimensions combinations for the rows</returns>
+        DataTable GetReport(string credentialFilePath, string viewId, DateTime startDate, DateTime endDate, IList<Metric> metrics, IList<Dimension> dimensions);
+    }
+
+    /// <summary>
+    /// This is the main class for Google Analytics Service For Dot Net. Use <see cref="GetReport(string, string, DateTime, DateTime, IList{Metric}, IList{Dimension})"/> to get a report with the provided input.
+    /// </summary>
+    public class GoogleAnalyticsService : IGoogleAnalyticsService
+    {
+        /// <summary>
+        /// The application name. Default is null.
         /// </summary>
         private readonly string applicationName;
 
         /// <summary>
-        /// 
+        /// This constructor accepts an applicationName, which by default is null.
         /// </summary>
-        private readonly string fileDataStoreFolder;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="applicationName"></param>
-        /// <param name="fileDataStoreFolder"></param>
-        public GoogleAnalyticsService(string applicationName, string fileDataStoreFolder)
+        /// <param name="applicationName">The Client Service Application Name used in the Google Analytics Initializer call.</param>
+        public GoogleAnalyticsService(string applicationName = null)
         {
             this.applicationName = applicationName;
-            this.fileDataStoreFolder = fileDataStoreFolder;
         }
 
         /// <summary>
-        /// 
+        /// Get a Google Analytics v4 Reporting Report with the provided input
         /// </summary>
-        /// <param name="loginEmail"></param>
-        /// <param name="clientSecretPath"></param>
-        /// <param name="viewId"></param>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="metrics"></param>
-        /// <param name="dimensions"></param>
-        /// <returns></returns>
-        public async Task<DataTable> GetReport
-        (
-            string loginEmail, string clientSecretPath, string viewId,
-            DateTime startDate, DateTime endDate,
-            IList<Metric> metrics, IList<Dimension> dimensions
-        )
+        /// <param name="credentialFilePath">This is the path to your service account .json file</param>
+        /// <param name="viewId">This is the view id from analytics.google.com</param>
+        /// <param name="startDate">The start date for the report</param>
+        /// <param name="endDate">The end date for the report</param>
+        /// <param name="metrics">The metrics to use when generating the report</param>
+        /// <param name="dimensions">The dimensions to use when generating the report</param>
+        /// <returns><see cref="DataTable"/> with the unique dimensions combinations for the rows</returns>
+        public DataTable GetReport(string credentialFilePath, string viewId, DateTime startDate, DateTime endDate, IList<Metric> metrics, IList<Dimension> dimensions)
         {
-            var credential = await GetCredential(loginEmail, clientSecretPath);
+            var credential = GoogleCredential.FromFile(credentialFilePath).CreateScoped(new [] 
+            {
+                AnalyticsReportingService.Scope.AnalyticsReadonly
+            });
 
             var initializer = new BaseClientService.Initializer
             {
@@ -65,7 +69,7 @@ namespace GoogleAnalyticsServiceForDotNet
                 ApplicationName = applicationName
             };
 
-            using (var svc = new AnalyticsReportingService(initializer))
+            using (var reportingService = new AnalyticsReportingService(initializer))
             {
                 var reportRequest = new ReportRequest
                 {
@@ -77,10 +81,13 @@ namespace GoogleAnalyticsServiceForDotNet
 
                 var getReportsRequest = new GetReportsRequest
                 {
-                    ReportRequests = new List<ReportRequest> { reportRequest }
+                    ReportRequests = new List<ReportRequest> 
+                    { 
+                        reportRequest 
+                    }
                 };
 
-                var batchRequest = svc.Reports.BatchGet(getReportsRequest);
+                var batchRequest = reportingService.Reports.BatchGet(getReportsRequest);
                 var response = batchRequest.Execute();
 
                 var result = GenerateDataTable(response.Reports.First());
@@ -132,19 +139,6 @@ namespace GoogleAnalyticsServiceForDotNet
                         EndDate = endDate.ToString("yyyy-MM-dd")
                     }
                 };
-            }
-
-            async Task<UserCredential> GetCredential(string loginEmail, string clientSecretPath)
-            {
-                using (var stream = new FileStream(clientSecretPath, FileMode.Open, FileAccess.Read))
-                {
-                    return await GoogleWebAuthorizationBroker.AuthorizeAsync(
-                        GoogleClientSecrets.Load(stream).Secrets,
-                        new[] { AnalyticsReportingService.Scope.Analytics },
-                        loginEmail,
-                        CancellationToken.None,
-                        new FileDataStore(fileDataStoreFolder));
-                }
             }
         }
     }

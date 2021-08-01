@@ -13,12 +13,12 @@ references:
   commentId: T:GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService
   fullName: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService
   nameWithType: GoogleAnalyticsService
-- uid: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.#ctor(System.String,System.String)
-  name: GoogleAnalyticsService(String, String)
-  href: api/GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.html#GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService__ctor_System_String_System_String_
-  commentId: M:GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.#ctor(System.String,System.String)
-  fullName: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GoogleAnalyticsService(System.String, System.String)
-  nameWithType: GoogleAnalyticsService.GoogleAnalyticsService(String, String)
+- uid: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.#ctor(System.String)
+  name: GoogleAnalyticsService(String)
+  href: api/GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.html#GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService__ctor_System_String_
+  commentId: M:GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.#ctor(System.String)
+  fullName: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GoogleAnalyticsService(System.String)
+  nameWithType: GoogleAnalyticsService.GoogleAnalyticsService(String)
 - uid: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.#ctor*
   name: GoogleAnalyticsService
   href: api/GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.html#GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService__ctor_
@@ -26,15 +26,15 @@ references:
   isSpec: "True"
   fullName: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GoogleAnalyticsService
   nameWithType: GoogleAnalyticsService.GoogleAnalyticsService
-- uid: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String,System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Metric},System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Dimension})
-  name: GetReport(String, String, String, DateTime, DateTime, IList<Metric>, IList<Dimension>)
-  href: api/GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.html#GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService_GetReport_System_String_System_String_System_String_System_DateTime_System_DateTime_System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Metric__System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Dimension__
-  commentId: M:GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String,System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Metric},System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Dimension})
-  name.vb: GetReport(String, String, String, DateTime, DateTime, IList(Of Metric), IList(Of Dimension))
-  fullName: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String, System.String, System.String, System.DateTime, System.DateTime, System.Collections.Generic.IList<Google.Apis.AnalyticsReporting.v4.Data.Metric>, System.Collections.Generic.IList<Google.Apis.AnalyticsReporting.v4.Data.Dimension>)
-  fullName.vb: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String, System.String, System.String, System.DateTime, System.DateTime, System.Collections.Generic.IList(Of Google.Apis.AnalyticsReporting.v4.Data.Metric), System.Collections.Generic.IList(Of Google.Apis.AnalyticsReporting.v4.Data.Dimension))
-  nameWithType: GoogleAnalyticsService.GetReport(String, String, String, DateTime, DateTime, IList<Metric>, IList<Dimension>)
-  nameWithType.vb: GoogleAnalyticsService.GetReport(String, String, String, DateTime, DateTime, IList(Of Metric), IList(Of Dimension))
+- uid: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Metric},System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Dimension})
+  name: GetReport(String, String, DateTime, DateTime, IList<Metric>, IList<Dimension>)
+  href: api/GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.html#GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService_GetReport_System_String_System_String_System_DateTime_System_DateTime_System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Metric__System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Dimension__
+  commentId: M:GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Metric},System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Dimension})
+  name.vb: GetReport(String, String, DateTime, DateTime, IList(Of Metric), IList(Of Dimension))
+  fullName: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String, System.String, System.DateTime, System.DateTime, System.Collections.Generic.IList<Google.Apis.AnalyticsReporting.v4.Data.Metric>, System.Collections.Generic.IList<Google.Apis.AnalyticsReporting.v4.Data.Dimension>)
+  fullName.vb: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport(System.String, System.String, System.DateTime, System.DateTime, System.Collections.Generic.IList(Of Google.Apis.AnalyticsReporting.v4.Data.Metric), System.Collections.Generic.IList(Of Google.Apis.AnalyticsReporting.v4.Data.Dimension))
+  nameWithType: GoogleAnalyticsService.GetReport(String, String, DateTime, DateTime, IList<Metric>, IList<Dimension>)
+  nameWithType.vb: GoogleAnalyticsService.GetReport(String, String, DateTime, DateTime, IList(Of Metric), IList(Of Dimension))
 - uid: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport*
   name: GetReport
   href: api/GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.html#GoogleAnalyticsServiceForDotNet_GoogleAnalyticsService_GetReport_
@@ -42,3 +42,25 @@ references:
   isSpec: "True"
   fullName: GoogleAnalyticsServiceForDotNet.GoogleAnalyticsService.GetReport
   nameWithType: GoogleAnalyticsService.GetReport
+- uid: GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService
+  name: IGoogleAnalyticsService
+  href: api/GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.html
+  commentId: T:GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService
+  fullName: GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService
+  nameWithType: IGoogleAnalyticsService
+- uid: GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.GetReport(System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Metric},System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Dimension})
+  name: GetReport(String, String, DateTime, DateTime, IList<Metric>, IList<Dimension>)
+  href: api/GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.html#GoogleAnalyticsServiceForDotNet_IGoogleAnalyticsService_GetReport_System_String_System_String_System_DateTime_System_DateTime_System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Metric__System_Collections_Generic_IList_Google_Apis_AnalyticsReporting_v4_Data_Dimension__
+  commentId: M:GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.GetReport(System.String,System.String,System.DateTime,System.DateTime,System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Metric},System.Collections.Generic.IList{Google.Apis.AnalyticsReporting.v4.Data.Dimension})
+  name.vb: GetReport(String, String, DateTime, DateTime, IList(Of Metric), IList(Of Dimension))
+  fullName: GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.GetReport(System.String, System.String, System.DateTime, System.DateTime, System.Collections.Generic.IList<Google.Apis.AnalyticsReporting.v4.Data.Metric>, System.Collections.Generic.IList<Google.Apis.AnalyticsReporting.v4.Data.Dimension>)
+  fullName.vb: GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.GetReport(System.String, System.String, System.DateTime, System.DateTime, System.Collections.Generic.IList(Of Google.Apis.AnalyticsReporting.v4.Data.Metric), System.Collections.Generic.IList(Of Google.Apis.AnalyticsReporting.v4.Data.Dimension))
+  nameWithType: IGoogleAnalyticsService.GetReport(String, String, DateTime, DateTime, IList<Metric>, IList<Dimension>)
+  nameWithType.vb: IGoogleAnalyticsService.GetReport(String, String, DateTime, DateTime, IList(Of Metric), IList(Of Dimension))
+- uid: GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.GetReport*
+  name: GetReport
+  href: api/GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.html#GoogleAnalyticsServiceForDotNet_IGoogleAnalyticsService_GetReport_
+  commentId: Overload:GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.GetReport
+  isSpec: "True"
+  fullName: GoogleAnalyticsServiceForDotNet.IGoogleAnalyticsService.GetReport
+  nameWithType: IGoogleAnalyticsService.GetReport

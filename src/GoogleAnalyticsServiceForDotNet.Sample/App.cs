@@ -9,14 +9,17 @@ namespace GoogleAnalyticsServiceForDotNet.Sample
     {
         public void Run()
         {
-            var applicationName = "Your application name";
-            var fileDataStoreFolder = "Your folder";
-            var service = new GoogleAnalyticsService(applicationName, fileDataStoreFolder);
+            // Give it a name, could also be null
+            var applicationName = "Google Analytics App";
 
-            var loginEmail = "example@example.com";
+            // this is the main service class to use
+            var service = new GoogleAnalyticsService(applicationName);
+
+            // set your start and end dates here
             var startDate = DateTime.Now.AddYears(-1);
             var endDate = DateTime.Now;
 
+            // add your dimensions and metrics here. The data table will have rows for every unique dimension combination. The columns will be the dimensions, then metrics, and the rows the same.
             var dimensions = new List<Dimension>();
             var dimension = new Dimension();
             dimension.Name = "ga:date";
@@ -27,24 +30,34 @@ namespace GoogleAnalyticsServiceForDotNet.Sample
             metric.Alias = "Sessions";
             metrics.Add(metric);
 
-            var viewId = "{yourViewId}";
+            // the view id found inside google analytics (analytics.google.com)
+            var viewId = "yourViewId";
 
-            var clientSecretPath = "client_secret.json"; // path to your client_secret json file
+            // path to your service account json file
+            var serviceAccountFilePath = "******.json";
 
             try
             {
-                var result = service.GetReport(loginEmail, clientSecretPath, viewId, startDate, endDate, metrics, dimensions).Result;
+                // this will return the DataTable with the columns being unique dimension combinations
+                var result = service.GetReport(serviceAccountFilePath, viewId, startDate, endDate, metrics, dimensions);
+
+                // The following will output to the console. You can take this output and build structure off of it to suite your needs.
                 foreach (DataColumn column in result.Columns)
                 {
                     Console.Write($"{column.ColumnName} ");
                 }
 
+                Console.WriteLine();
+
                 foreach (DataRow row in result.Rows)
                 {
+                    var r = string.Empty;
                     foreach (DataColumn column in result.Columns)
                     {
-                        Console.Write($"{row[column]} ");
+                        r += $"{row[column]} ";
                     }
+
+                    Console.WriteLine(r);
                 }
             }
             catch (Exception ex)

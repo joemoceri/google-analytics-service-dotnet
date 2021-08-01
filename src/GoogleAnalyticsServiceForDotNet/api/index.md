@@ -1,2 +1,3 @@
-# PLACEHOLDER
-TODO: Add .NET projects to the *src* folder and run `docfx` to generate **REAL** *API Documentation*!
+# Google Analytics Service for **.NET** API Reference
+
+## Please use the side bar to view references.
